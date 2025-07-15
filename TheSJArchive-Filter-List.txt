@@ -1,0 +1,103 @@
+! Title: TheSJArchive Filter List
+! Description: Blocks ads, trackers, and allows trusted services.
+! Compatible with: Brave, uBlock Origin, AdGuard
+! Last updated: 2025-07-15
+
+! =====================
+! === ALLOW (UNBLOCK) ===
+! =====================
+
+@@||accounts.google.com/o/*
+@@||fonts.googleapis.com^
+@@||play.google.com^$other
+@@||play.google.com^$xhr
+@@||googlesyndication.com^
+@@||googleapis.com^$script
+@@||sentry.io^$other
+@@||auth.services.adobe.com/signin/v1/audit$xhr
+@@||typekit.net^$image
+@@||challenges.cloudflare.com/turnstile/v0/api.js$script
+@@||challenges.cloudflare.com^
+@@||cloudflareinsights.com^$other
+@@||devfiles.pages.dev^
+@@||cdn.discordapp.com/*
+@@||liteapks.com/cdn-cgi/*$xhr
+@@||liteapks.com/wp-json/*$xhr
+@@||app.folo.is^$xhr
+@@||spiderdown.com^$download
+@@||d3mzokty951c5w.cloudfront.net^$script
+@@||pupilkang.top^$xhr
+
+! =====================
+! === BLOCK RULES ===
+! =====================
+
+||a-ads.com^
+||ad.doubleclick.net^
+||doubleclick.net^$script
+||clickadu.com^$xhr
+||fastly.jsdelivr.net/npm/disable-devtool/*$script
+||unpkg.com/sweetalert/dist/sweetalert.min.js$script
+||googlesyndication.com^$script
+||pagead2.googlesyndication.com^$script
+||googletagmanager.com^$script
+||googletagmanager.com^$other
+||ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20250625&st=env$xhr
+||fundingchoicesmessages.google.com/el/*$xhr
+||fbcdn.net^$stylesheet
+||apkdepothub.com^
+||apokreaboil.shop^
+||chaturbate.com^
+||honey-comics.com^
+||hbuagtcgvjqaz.com^$script
+||zintrack.com^$script
+||economictimes.com^
+||paymeindia.in/*$image
+||weedowbewhore.shop^$document
+||weedowbewhore.shop^$other
+||undaymidydle.com^$other
+||ukankingwithea.com^$other
+||shallowskiffs.top$loadurl
+||thoraxuntucks.top^$xhr
+||linariabigg.com^$other
+||mpbsunbusk.com^$other
+||nl.bkprglyptic.shop^$other
+||pestersmingler.world^$other
+||rr5---sn-a5mekn6k.googlevideo.com^$media
+||rr6---sn-bvvbaxivnuxqjvm-a5nl.googlevideo.com^$media
+||mobi-dl-d.com^$download
+||dmzokty951c5w.cloudfront.net^
+||displayvertising.com^
+||cleartracknetwork.com^
+||cleartracknetwork.com^$document
+||cleartracknetwork.com^$script
+||cdn.rizty.com^$script
+||cdn.rizty.com/_astro/*$script
+||cdn.rizty.com/passion-survey/*$document
+||my.rtmark.net/gid.js$xhr
+||pupilkang.top^$other
+||www.google.com/gen_204$other
+||^$popup,domain=uploady.io
+
+! =====================
+! === COSMETIC FILTERS ===
+! =====================
+
+! beatsnoop.com
+beatsnoop.com##+js(abort-on-property-read, swal)
+
+! toolxox.com
+toolxox.com##+js(abort-on-property-read, swal)
+
+! ud.toolxox.com
+ud.toolxox.com##.g-ytsubscribe
+ud.toolxox.com##.subscribe-container
+ud.toolxox.com##.footer
+ud.toolxox.com##iframe[src*="youtube.com/embed"]
+ud.toolxox.com##+js(aopr, swal)
+
+! m.youtube.com
+m.youtube.com##.ytmPaidContentOverlayLink
+
+! tinywow.com
+tinywow.com##div.row.banner-wrapper:nth-of-type(2)
